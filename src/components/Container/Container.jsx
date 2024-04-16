@@ -2,7 +2,6 @@ import clsx from 'clsx'
 
 import cn from './Container.module.scss'
 
-
 const Container = ({ children, className }) => {
   
   return (

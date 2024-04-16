@@ -1,14 +1,58 @@
 .header {
-  
-  &__icon {
-    fill: brown;
+
+  .header__container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .icon {
-    fill: orange;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: 30px 0;
   }
 
-  &__btn {
-    background-color: green;
+  &__logo {
+    display: flex;
+
+    & svg {
+      width: 147px;
+      height: 46px;
+    }
+  }
+}
+
+.nav {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding: 30px 16px;
+  }
+
+  &__link {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 110%;
+    text-transform: capitalize;
+    color: var(--white);
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+
+  &__link {
+    display: flex;
+  }
+
+  .social__icon {
+    width: 24px;
+    height: 24px;
   }
 }
