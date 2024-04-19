@@ -1,13 +1,7 @@
-import { BrowserRouter } from 'react-router-dom'
-import { AppRouter } from './components/AppRouter/AppRouter'
-
 const App = () => {
-
   return (
-    <div className='app'>
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+    <div>
+      <h1>App</h1>
     </div>
   )
 }
