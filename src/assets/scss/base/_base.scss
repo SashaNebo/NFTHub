@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  font-family: "Inter", sans-serif, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: var(--fz-body);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--fc-base);
+  background-color: var(--page-bg);
+  transition: background-color .1s linear ;
+}
+
+.main {
+  overflow: hidden;
+}
+
+svg {
+  fill: var(--fill);
+}

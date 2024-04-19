@@ -1,0 +1,39 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+
+    --silver: #B7B4BB;
+    --gray: #7B7583;
+    --night-blue: #0F051D;
+
+    --gradient-cold: linear-gradient(90deg, rgba(38, 0, 252, 1) 0%, rgba(255, 0, 234, 1) 100%);
+    --gradient-warm: linear-gradient(90deg, rgba(114,0,252,1) 0%, rgba(255,0,234,1) 100%);
+
+    --fz-title-desktop: 64px;
+    --fz-title-mobile: 42px;
+    --fz-body: 17px;
+
+    --trans-fast: all .1s ease-out 0s;
+    --trans-medium: all .2s ease-out 0s;
+    --trans-slow: all .3s ease-out 0s;
+}
+
+body[data-theme="light"] {
+    --page-bg: var(--white);
+    --navbar-bg: var(--white);
+
+    --fc-base: var(--night-blue);
+    --fc-text: var(--silver);
+
+    --fill: var(--night-blue);
+}
+
+body[data-theme="dark"] {
+    --page-bg: var(--night-blue);
+    --navbar-bg: var(--black);
+
+    --fc-base: var(--white);
+    --fc-text: var(--gray);
+    
+    --fill: var(--white);
+}
