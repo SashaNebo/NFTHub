@@ -9,10 +9,11 @@ body {
   font-size: var(--text);
   font-weight: 400;
   line-height: 1;
-  color: var(--silver);
-  background-color: var(--bg-in-dark);
+  color: var(--base-color);
+  background-color: var(--page-bg);
+  transition: background-color .1s linear ;
 }
 
 svg {
-  fill: #fff;
+  fill: var(--fill);
 }

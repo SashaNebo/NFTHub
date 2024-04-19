@@ -4,6 +4,8 @@ import cn from './Header.module.scss'
 import { SvgIcon } from '../SvgIcon'
 import { HeaderNav } from './HeaderNav'
 import { HeaderSocial } from './HeaderSocial'
+import { Example } from './motion/Example'
+import { Navbar } from './Navbar'
 
 const HeaderContent = () => {
   return (
@@ -14,6 +16,8 @@ const HeaderContent = () => {
 
       <HeaderNav />
       <HeaderSocial />
+      {/* <Example /> */}
+      <Navbar />
     </div>
   )
 }

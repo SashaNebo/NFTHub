@@ -29,7 +29,6 @@
     font-size: 72px;
     font-weight: 700;
     line-height: 100%;
-    color: var(--white);
     max-width: 520px;
   }
 
@@ -38,8 +37,12 @@
     font-weight: 400;
     font-size: 22px;
     line-height: 165%;
-    color: inherit;
+    color: var(--text-color);
     max-width: 422px;
+  }
+
+  .btn-link__icon {
+    fill: var(--white);
   }
 }
 
@@ -72,7 +75,6 @@
       font-weight: 700;
       font-size: 32px;
       line-height: 100%;
-      color: var(--white);
     }
 
     &-text {
@@ -85,18 +87,45 @@
 
 .wallets {
   margin-top: 125px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 65px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 65px;
+  }
 
   &__item {
+    
+    svg {
+      width: auto;
+      height: auto;
+    }
 
-    &:first-child {
+    .metamask {
+      width: 175px;
+      height: 60px;
+    }
 
-      img {
-        width: 200px;
-      }
+    .bitgo {
+      width: 113px;
+      height: 28px;
+    }
+
+    .coinbase {
+      width: 155px;
+      height: 28px;
+    }
+
+    .trustWallet {
+      width: 170px;
+      height: 42px;
+    }
+
+    .exodus {
+      width: 126px;
+      height: 33px;
+      fill: var(--fill);
     }
   }
 }

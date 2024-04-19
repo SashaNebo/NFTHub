@@ -17,7 +17,7 @@ const HeroContent = () => {
 
         <UIButtonLink to={baseUrl}>
           View in OPENSEA
-          <SvgIcon icon='arrowDiagonal' />
+          <SvgIcon className={cn['btn-link__icon']} icon='arrowDiagonal' />
         </UIButtonLink>
 
         <HeroCommunity />

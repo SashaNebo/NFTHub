@@ -15,10 +15,10 @@ import sprite from '../../assets/images/icons/sprite.svg'
 // NFTHub
 // arrowDiagonal
 
-const SvgIcon = ({ icon = 'NFTHub', className }) => {
+const SvgIcon = ({ icon = 'NFTHub', className, ...restProps }) => {
   
   return (
-    <svg className={clsx(cn['svg'], className)}>
+    <svg className={clsx(cn['svg'], className)} {...restProps}>
       <use href={`${sprite}#${icon}`}></use>
     </svg>
   )

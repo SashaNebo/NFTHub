@@ -2,13 +2,9 @@
     --white: #ffffff;
     --black: #000000;
 
-    --bg-in-light: #ffffff;
-    --bg-in-dark: #0F051D;
-
     --silver: #B7B4BB;
     --gray: #7B7583;
     --night-blue: #0F051D;
-    --pink: #FF00EA;
 
     --gradient-cold: linear-gradient(90deg, rgba(38, 0, 252, 1) 0%, rgba(255, 0, 234, 1) 100%);
     --gradient-warm: linear-gradient(90deg, rgba(114,0,252,1) 0%, rgba(255,0,234,1) 100%);
@@ -16,4 +12,20 @@
     --title-xl: 64px;
     --title-l: 42px;
     --text: 17px
+}
+
+body[data-theme="light"] {
+    --page-bg: var(--white);
+    --mobile-bg: var(--white);
+    --base-color: var(--night-blue);
+    --text-color: var(--silver);
+    --fill: var(--night-blue);
+}
+
+body[data-theme="dark"] {
+    --page-bg: var(--night-blue);
+    --mobile-bg: var(--black);
+    --base-color: var(--white);
+    --text-color: var(--gray);
+    --fill: var(--white);
 }
