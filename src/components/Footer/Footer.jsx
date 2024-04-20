@@ -4,7 +4,7 @@ const Footer = () => {
   
   return (
     <footer className={cn['footer']}>
-      <h1>Footer</h1>
+      
     </footer>
   )
 }

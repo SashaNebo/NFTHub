@@ -1,0 +1,28 @@
+.gradient-position {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  mix-blend-mode: overlay;
+}
+
+.gradient-img {
+  width: 500px;
+  max-width: 100%;
+  position: fixed;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  transition: var(--trans-3);
+
+  &.top {
+    left: -4%;
+    top: -4%;
+  }
+
+  &.bottom {
+    right: -4%;
+    bottom: -4%;
+  }
+}

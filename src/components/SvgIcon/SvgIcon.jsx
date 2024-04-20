@@ -27,7 +27,7 @@ wallet
 tickDown
 tickUp
 tickSlider
-NFTHub
+nfthub
 arrowDiagonal
 sun
 moon

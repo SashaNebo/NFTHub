@@ -1,1 +1,1 @@
-export const baseUrl = '/nfthub'
+export const baseRoute = '/nfthub'
