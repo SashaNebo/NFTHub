@@ -19,4 +19,4 @@
   //   )
 
   //   stickyRef.current && observerRef.current.observe(stickyRef.current)
-  // }, [])
+// }, [])

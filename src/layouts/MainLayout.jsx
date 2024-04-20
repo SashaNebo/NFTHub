@@ -1,5 +1,5 @@
 import { ThemeModifier } from '../components/ThemeModifier/ThemeModifier'
-import { Header } from '../components/Header/HeaderMain'
+import { HeaderMain } from '../components/HeaderDirectory'
 import { Main } from '../components/Main'
 import { Footer } from '../components/Footer'
 
@@ -7,7 +7,7 @@ const MainLayout = () => (
   <>
     <ThemeModifier />
 
-    <Header />
+    <HeaderMain />
     <Main />
     <Footer />
   </>

@@ -5,7 +5,7 @@ import { GradientPosition } from '../GradientPosition'
 
 const Main = () => {
   return (
-    <main className='main'>
+    <main className={cn['main']}>
       <GradientPosition />
 
       <div className='main__content'>

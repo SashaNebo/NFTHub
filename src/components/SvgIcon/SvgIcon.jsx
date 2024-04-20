@@ -31,5 +31,6 @@ nfthub
 arrowDiagonal
 sun
 moon
+openMobileMenu
 
 ----- */
