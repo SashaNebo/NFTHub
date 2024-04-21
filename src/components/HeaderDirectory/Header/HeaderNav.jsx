@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import cn from './Header.module.scss'
 import { baseRoute } from '../../../routes'
 
-const HeaderNav = ({ theme }) => {
+const HeaderNav = () => {
   const navItems = [
     { link: '', text: 'home' },
     { link: 'collection', text: 'collection' },
@@ -19,12 +19,12 @@ const HeaderNav = ({ theme }) => {
         {navItems.map(({ link, text }) => (
           <li className={cn['nav__item']} key={link}>
             <Link
-              className={[cn['nav__link'], cn[theme]].join(' ')}
+              className={cn['nav__link']}
               to={`${baseRoute}/${link}`}>
               {text}
             </Link>
 
-            {text === 'home' && <Subnav theme={theme} />}
+            {text === 'home' && <Subnav />}
           </li>
         ))}
       </ul>
@@ -32,7 +32,7 @@ const HeaderNav = ({ theme }) => {
   )
 }
 
-const Subnav = ({ theme }) => {
+const Subnav = () => {
   const subnavItems = [
     { link: 'home-one', text: 'home one' },
     { link: 'home-two', text: 'home two' },
@@ -41,11 +41,11 @@ const Subnav = ({ theme }) => {
   ]
 
   return (
-    <ul className={[cn['subnav'], cn[theme]].join(' ')}>
+    <ul className={cn['subnav']}>
       {subnavItems.map(({ link, text }) => (
         <li className={cn['subnav__item']} key={link}>
           <Link
-            className={[cn['subnav__link'], cn[theme]].join(' ')}
+            className={cn['subnav__link']}
             to={`${baseRoute}/${link}`}>
             {text}
           </Link>

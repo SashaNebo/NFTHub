@@ -5,26 +5,19 @@ import { SvgIcon } from '../../SvgIcon'
 import { baseRoute } from '../../../routes'
 import { HeaderNav } from './HeaderNav'
 import { HeaderSocial } from './HeaderSocial'
-import { useThemeValue } from '../../../hooks/useThemeValue'
 
 const HeaderContent = () => {
-  const theme = useThemeValue()
-
   return (
     <div className={cn['header__content']}>
       <Link className={cn['header__logo']} to={baseRoute}>
         <SvgIcon icon='nfthub' />
       </Link>
 
-      <HeaderNav theme={theme} />
-
-      <div className={cn['header__right']}>
-        <HeaderSocial />
-
-        <button className={cn['mobile-menu-btn']}>
-          <SvgIcon icon='openMobileMenu' />
-        </button>
-      </div>
+      <HeaderNav />
+      <HeaderSocial />
+      <button className={cn['mobile-menu-btn']}>
+        <SvgIcon icon='openMobileMenu' />
+      </button>
     </div>
   )
 }
