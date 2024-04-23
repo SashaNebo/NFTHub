@@ -1,1 +1,1 @@
-// [data-theme="dark"] {}
+export const portal = document.getElementById('portal')

@@ -5,6 +5,7 @@ import { SvgIcon } from '../../SvgIcon'
 import { baseRoute } from '../../../routes'
 import { HeaderNav } from './HeaderNav'
 import { HeaderSocial } from './HeaderSocial'
+import { HeaderMobileMenu } from './HeaderMobileMenu'
 
 const HeaderContent = () => {
   return (
@@ -15,9 +16,7 @@ const HeaderContent = () => {
 
       <HeaderNav />
       <HeaderSocial />
-      <button className={cn['mobile-menu-btn']}>
-        <SvgIcon icon='openMobileMenu' />
-      </button>
+      <HeaderMobileMenu />
     </div>
   )
 }

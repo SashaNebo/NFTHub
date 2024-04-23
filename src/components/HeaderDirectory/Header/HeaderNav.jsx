@@ -23,7 +23,6 @@ const HeaderNav = () => {
               to={`${baseRoute}/${link}`}>
               {text}
             </Link>
-
             {text === 'home' && <Subnav />}
           </li>
         ))}

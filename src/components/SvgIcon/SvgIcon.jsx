@@ -24,13 +24,12 @@ twitter
 telegram
 facebook
 wallet
-tickDown
-tickUp
-tickSlider
 nfthub
-arrowDiagonal
 sun
 moon
-openMobileMenu
+btnOpenMobileMenu
+btnCloseMobileMenu
+plus
+minus
 
 ----- */
