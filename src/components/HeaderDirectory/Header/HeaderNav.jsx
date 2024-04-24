@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
-
 import cn from './Header.module.scss'
 import { baseRoute } from '../../../routes'
+import { CustomLink } from '../../CustomLink'
 
 const HeaderNav = () => {
   const navItems = [
@@ -18,11 +17,12 @@ const HeaderNav = () => {
       <ul className={cn['nav__list']}>
         {navItems.map(({ link, text }) => (
           <li className={cn['nav__item']} key={link}>
-            <Link
+            <CustomLink
               className={cn['nav__link']}
-              to={`${baseRoute}/${link}`}>
+              activeClassName={cn['active']}
+              to={`${baseRoute}/${link}`} end={true}>
               {text}
-            </Link>
+            </CustomLink>
             {text === 'home' && <Subnav />}
           </li>
         ))}
@@ -43,11 +43,12 @@ const Subnav = () => {
     <ul className={cn['subnav']}>
       {subnavItems.map(({ link, text }) => (
         <li className={cn['subnav__item']} key={link}>
-          <Link
+          <CustomLink
             className={cn['subnav__link']}
+            activeClassName={cn['active']}
             to={`${baseRoute}/${link}`}>
             {text}
-          </Link>
+          </CustomLink>
         </li>
       ))}
     </ul>

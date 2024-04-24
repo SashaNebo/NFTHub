@@ -8,7 +8,7 @@ import { MobileMenuHeader } from './MobileMenuHeader'
 import { MobileMenuNav } from './MobileMenuNav'
 import { MobileMenuSocial } from './MobileMenuSocial'
 import { useDimensions } from '../../hooks/useDimensions'
-import { variantsMobileMenu } from './additional'
+import { anMobileMenu } from './animation'
 
 const MobileMenu = ({ isOpen, toggleOpen }) => {
   const timerRef = useRef(null)
@@ -17,7 +17,7 @@ const MobileMenu = ({ isOpen, toggleOpen }) => {
 
   useEffect(() => {
     if (isOpen) document.body.classList.add('scroll-none')
-    
+
     if (!isOpen) {
       timerRef.current && clearTimeout(timerRef.current)
 
@@ -35,10 +35,10 @@ const MobileMenu = ({ isOpen, toggleOpen }) => {
         animate={isOpen ? 'open' : 'closed'}
         custom={height}
         ref={containerRef}
-        variants={variantsMobileMenu}>
+        variants={anMobileMenu}>
         <div className={cn['mobile-menu__content']}>
           <MobileMenuHeader toggleOpen={toggleOpen} />
-          <MobileMenuNav isOpenMobileMenu={isOpen}/>
+          <MobileMenuNav isOpenMobileMenu={isOpen} />
           <MobileMenuSocial />
         </div>
       </motion.div>

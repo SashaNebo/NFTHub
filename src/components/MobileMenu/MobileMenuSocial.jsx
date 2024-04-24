@@ -3,21 +3,14 @@ import { motion } from 'framer-motion'
 
 import cn from './MobileMenu.module.scss'
 import { SvgIcon } from '../SvgIcon'
-import { variantsNavList, variantsSocialItem } from './additional'
+import { anNavList, anSocialItem } from './animation'
+import { socialItems } from './additional'
 
 const MobileMenuSocial = () => {
-  const socialItems = [
-    'facebook',
-    'twitter',
-    'instagram',
-    'discord',
-    'telegram',
-  ]
-
   return (
-    <motion.ul className={cn['social']} variants={variantsNavList}>
+    <motion.ul className={cn['social']} variants={anNavList}>
       {socialItems.map((socialItem) => (
-        <motion.li className={cn['social__item']} key={socialItem} variants={variantsSocialItem}>
+        <motion.li className={cn['social__item']} key={socialItem} variants={anSocialItem}>
           <Link
             className={cn['social__link']}
             to={`https://${socialItem}.com`}

@@ -1,96 +1,23 @@
-export const variantsMobileMenu = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 30px 30px)`,
-    transition: {
-      type: 'spring',
-      stiffness: 20,
-      restDelta: 2,
-    },
-  }),
-  closed: {
-    clipPath: 'circle(0px at 100% 0px)',
-    transition: {
-      delay: 0.5,
-      type: 'spring',
-      stiffness: 400,
-      damping: 40,
-    },
-  },
-}
+export const navItems = [
+  { link: '', text: 'home' },
+  { link: 'collection', text: 'collection' },
+  { link: 'choose', text: 'choose' },
+  { link: 'about', text: 'about' },
+  { link: 'roadmap', text: 'roadmap' },
+  { link: 'blog', text: 'blog' },
+]
 
-export const variantsNavList = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-}
+export const subnavItems = [
+  { link: 'home-one', text: 'home one' },
+  { link: 'home-two', text: 'home two' },
+  { link: 'home-three', text: 'home three' },
+  { link: 'home-four', text: 'home four' },
+]
 
-export const variantsNavItem = {
-  open: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      y: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    y: 50,
-    opacity: 0,
-    transition: {
-      y: { stiffness: 1000 },
-    },
-  },
-}
-
-export const variantsSocialItem = {
-  open: {
-    scale: 1,
-    transition: {
-      scale: { stiffness: 1000, velocity: -100 },
-    },
-  },
-  closed: {
-    scale: 0,
-    transition: {
-      scale: { stiffness: 1000 },
-    },
-  },
-}
-
-export const variantsBtnClose = {
-  open: {
-    rotate: 0,
-    transition: {
-      rotate: { stiffness: 10, velocity: -10 },
-    },
-  },
-  closed: {
-    rotate: 180,
-    transition: {
-      rotate: { stiffness: 10 },
-    },
-  },
-}
-
-export const variantsSubnavList = {
-  hidden: { opacity: 1, scale: 1 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.2,
-    },
-  },
-}
-
-export const variantsSubnavItem = {
-  hidden: { x: -100, opacity: 0 },
-
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-}
+export const socialItems = [
+  'facebook',
+  'twitter',
+  'instagram',
+  'discord',
+  'telegram',
+]

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import cn from './MobileMenu.module.scss'
 import { baseRoute } from '../../routes'
 import { SvgIcon } from '../SvgIcon'
-import { variantsBtnClose } from './additional'
+import { anBtnClose } from './animation'
 
 const MobileMenuHeader = ({ toggleOpen }) => {
   return (
@@ -16,7 +16,7 @@ const MobileMenuHeader = ({ toggleOpen }) => {
       <motion.button
         className={cn['mobile-menu-close']}
         onClick={toggleOpen}
-        variants={variantsBtnClose}>
+        variants={anBtnClose}>
         <SvgIcon icon='btnCloseMobileMenu' />
       </motion.button>
     </div>

@@ -16,22 +16,10 @@ body {
   transition: background-color .1s linear ;
 }
 
-.main {
-  
+button:focus-visible {
+ outline-offset: 3px;
 }
 
 svg {
   fill: var(--fill);
-}
-
-body {
-  
-}
-
-#root {
-  
-}
-
-#portal {
- 
 }
