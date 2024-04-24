@@ -23,6 +23,7 @@ instagram
 twitter
 telegram
 facebook
+youtube
 wallet
 nfthub
 sun
@@ -37,5 +38,6 @@ coinbase
 trustWallet
 exodus
 tickRight
+arrowhead
 
 ----- */

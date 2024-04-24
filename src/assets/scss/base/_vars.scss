@@ -26,7 +26,8 @@ body[data-theme="light"] {
     --navbar-bg: var(--white);
 
     --fc-base: var(--night-blue);
-    --fc-text: var(--silver);
+    --fc-text: var(--gray);
+    
 
     --fill: var(--night-blue);
 }
@@ -36,7 +37,7 @@ body[data-theme="dark"] {
     --navbar-bg: var(--black);
 
     --fc-base: var(--white);
-    --fc-text: var(--gray);
+    --fc-text: var(--silver);
     
     --fill: var(--white);
 }
