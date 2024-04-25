@@ -8,7 +8,7 @@ const Main = () => {
     <main className={cn['main']}>
       <GradientPosition />
 
-      <div className='main__content'>
+      <div className='content'>
         <Outlet />
       </div>
     </main>

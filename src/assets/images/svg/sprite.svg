@@ -314,18 +314,28 @@
   </symbol>
 
   <!-- tickRight -->
-  <svg id="tickRight" viewBox="0 0 24.00 24.00" fill="none">
+  <symbol id="tickRight" viewBox="0 0 24.00 24.00" fill="none">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
       <path d="M10 7L15 12L10 17" stroke="inherit" stroke-width="inherit"
         stroke-linecap="round" stroke-linejoin="round"></path>
     </g>
-  </svg>
+  </symbol>
 
   <!-- arrowhead -->
   <symbol id="arrowhead" viewBox="0 0 15 9">
     <path
       d="M7.33333 2.31382L1.54 8.03382C1.39333 8.22937 1.18556 8.32715 0.916667 8.32715C0.647778 8.32715 0.427778 8.24159 0.256667 8.07048C0.0855556 7.89937 0 7.67937 0 7.41048C0 7.14159 0.0977778 6.93382 0.293333 6.78715L6.67333 0.333816C6.86889 0.138261 7.08889 0.0404825 7.33333 0.0404825C7.57778 0.0404825 7.79778 0.138261 7.99333 0.333816L14.3733 6.78715C14.5689 6.93382 14.6667 7.14159 14.6667 7.41048C14.6667 7.67937 14.5811 7.89937 14.41 8.07048C14.2389 8.24159 14.0189 8.32715 13.75 8.32715C13.4811 8.32715 13.2733 8.22937 13.1267 8.03382L7.33333 2.31382Z" />
+  </symbol>
+
+  <!-- arrowUpRight -->
+  <symbol id="arrowUpRight" viewBox="0 0 16 16">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <rect width="16" height="16" id="icon-bound" fill="none"></rect>
+      <path d="M4,4L10.586,4L0.979,13.607L2.393,15.021L12,5.414L12,12L14,12L14,2L4,2L4,4Z"></path>
+    </g>
   </symbol>
 </svg>

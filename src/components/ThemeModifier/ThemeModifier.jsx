@@ -11,7 +11,7 @@ const ThemeModifier = () => {
     <div className={cn['theme-modifier']}>
       <button
         className={[cn['theme-modifier__btn'], cn[theme]].join(' ')}
-        onClick={setTheme}>
+        onClick={setTheme} aria-label='button toggle theme'>
         <SvgIcon
           className={[cn['icon'], cn[theme]].join(' ')}
           icon={theme === 'light' ? 'sun' : 'moon'}

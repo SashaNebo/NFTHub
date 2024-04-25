@@ -16,7 +16,10 @@ const ModalWalletConnect = () => {
   return (
     <div className={cn['connect']}>
       {wallets.map(({ img, text }) => (
-        <button className={cn['connect__btn']} key={img}>
+        <button
+          className={cn['connect__btn']}
+          key={img}
+          aria-label='button connect wallet'>
           <div className={cn['connect__brand']} key={text}>
             <img src={img} alt='' />
             <span>{text}</span>

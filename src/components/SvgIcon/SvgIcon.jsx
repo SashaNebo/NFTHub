@@ -39,5 +39,6 @@ trustWallet
 exodus
 tickRight
 arrowhead
+arrowUpRight
 
 ----- */

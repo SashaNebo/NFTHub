@@ -14,6 +14,7 @@ const CustomLink = ({
         isActive ? clsx(className, activeClassName) : className
       }
       to={to}
+      aria-label={`navigation link`}
       {...restProps}>
       {children}
     </NavLink>

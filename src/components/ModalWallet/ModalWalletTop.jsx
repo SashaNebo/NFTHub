@@ -4,7 +4,7 @@ import { SvgIcon } from '../SvgIcon'
 const ModalWalletTop = ({ onClose }) => {
   return (
     <>
-      <button className={cn['btn-close']} onClick={onClose}>
+      <button className={cn['btn-close']} onClick={onClose} aria-label='button close modal'>
         <SvgIcon icon='btnCloseMobileMenu' />
       </button>
 

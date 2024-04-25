@@ -16,14 +16,16 @@ const HeaderSocial = () => {
             {socialItem === 'wallet' ? (
               <button
                 className={cn['social__link']}
-                onClick={() => setIsOpenModal(true)}>
+                onClick={() => setIsOpenModal(true)}
+                aria-label='button open modal wallet'>
                 <SvgIcon icon={socialItem} />
               </button>
             ) : (
               <a
                 className={cn['social__link']}
                 href={`https://${socialItem}.com`}
-                target='_blank'>
+                target='_blank'
+                aria-label='social link'>
                 <SvgIcon icon={socialItem} />
               </a>
             )}

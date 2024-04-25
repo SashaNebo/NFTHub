@@ -36,6 +36,7 @@ const ColOne = () => {
             className={cn['social__link']}
             href={`https:${item}.com`}
             target='_blank'
+            aria-label="social link"
             key={item}>
             <SvgIcon icon={item} />
           </a>
@@ -58,9 +59,11 @@ const ColTwo = () => {
       <h1 className={cn['title']}>Quick Link</h1>
       <ul className={cn['links']}>
         {links.map(({ link, text }) => (
-          <CustomLink className={cn['link']} to={link} key={link}>
-            {text}
-          </CustomLink>
+          <li key={link}>
+            <CustomLink className={cn['link']} to={link}>
+              {text}
+            </CustomLink>
+          </li>
         ))}
       </ul>
     </div>
@@ -79,9 +82,11 @@ const ColThree = () => {
       <h1 className={cn['title']}>Community</h1>
       <ul className={cn['links']}>
         {links.map(({ link, text }) => (
-          <CustomLink className={cn['link']} to={link} key={link}>
-            {text}
-          </CustomLink>
+          <li key={link}>
+            <CustomLink className={cn['link']} to={link}>
+              {text}
+            </CustomLink>
+          </li>
         ))}
       </ul>
     </div>

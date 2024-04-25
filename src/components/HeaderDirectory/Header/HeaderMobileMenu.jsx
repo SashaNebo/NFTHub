@@ -9,7 +9,7 @@ const HeaderMobileMenu = () => {
 
   return (
     <>
-      <button className={cn['mobile-menu-btn']} onClick={toggleOpen}>
+      <button className={cn['mobile-menu-btn']} onClick={toggleOpen} aria-label='button open mobile menu'>
         <SvgIcon icon='btnOpenMobileMenu' />
       </button>
 

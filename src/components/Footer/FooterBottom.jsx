@@ -10,7 +10,7 @@ const FooterBottom = () => {
       <div className={cn['precept']}>
         <p className={cn['privacy']}>Privacy policy</p>
         <p className={cn['terms']}>Terms of Use</p>
-        <button className={cn['back-top']}>
+        <button className={cn['back-top']} aria-label='button back top'>
           <SvgIcon icon='arrowhead' />
         </button>
       </div>
