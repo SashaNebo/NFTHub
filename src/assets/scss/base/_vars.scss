@@ -9,8 +9,10 @@
     --gray: #7B7583;
     --night-blue: #0F051D;
 
-    --gradient-cold: linear-gradient(90deg, rgba(38, 0, 252, 1) 0%, rgba(255, 0, 234, 1) 100%);
-    --gradient-warm: linear-gradient(90deg, rgba(114,0,252,1) 0%, rgba(255,0,234,1) 100%);
+    --gradient-1: #2600fc;
+    --gradient-2: #ff00ea;
+
+    --main-gradient: linear-gradient(25deg, var(--gradient-1), var(--gradient-2));
 
     --fz-title-desktop: 64px;
     --fz-title-mobile: 42px;

@@ -14,7 +14,7 @@ const ModalWallet = ({ isOpen, onClose }) => {
   }, [isOpen])
 
   const modalWallet = (
-    <div className={clsx(cn['overlay'], isOpen && cn['open'])} onClick={onClose}>
+    <div className={clsx(cn['modal-overlay'], isOpen && cn['open'])} onClick={onClose}>
       <div className={clsx(cn['modal'], isOpen && cn['open'])} onClick={(e) => e.stopPropagation()}>
         <div className={cn['modal__wrapper']}>
           <div className={cn['modal__content']}>

@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 
 import cn from './Footer.module.scss'
-import logoImg from '../../assets/images/svg/gradient-nfthub.svg'
+import logoImg from '../../assets/images/svg/other/gradient-nfthub.svg'
 import { SvgIcon } from '../../components/SvgIcon'
 import { CustomLink } from '../../components/CustomLink'
 import { baseRoute } from '../../routes'

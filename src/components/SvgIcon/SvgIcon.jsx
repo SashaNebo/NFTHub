@@ -32,11 +32,6 @@ btnOpenMobileMenu
 btnCloseMobileMenu
 plus
 minus
-metamask
-bitgo
-coinbase
-trustWallet
-exodus
 tickRight
 arrowhead
 arrowUpRight

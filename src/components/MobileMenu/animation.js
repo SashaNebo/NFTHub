@@ -74,23 +74,23 @@ export const anBtnClose = {
   },
 }
 
-export const anSubnavList = {
-  hidden: { opacity: 1, scale: 1 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.1,
-      staggerChildren: 0.2,
-    },
-  },
-}
+// export const anSubnavList = {
+//   hidden: { opacity: 1, scale: 1 },
+//   visible: {
+//     opacity: 1,
+//     scale: 1,
+//     transition: {
+//       delayChildren: 0.1,
+//       staggerChildren: 0.2,
+//     },
+//   },
+// }
 
-export const anSubnavItem = {
-  hidden: { x: -100, opacity: 0 },
+// export const anSubnavItem = {
+//   hidden: { x: -100, opacity: 0 },
 
-  visible: {
-    x: 0,
-    opacity: 1,
-  },
-}
+//   visible: {
+//     x: 0,
+//     opacity: 1,
+//   },
+// }

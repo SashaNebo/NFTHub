@@ -1,0 +1,35 @@
+.title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--fc-base);
+
+  &__gradient {
+    background-color: var(--gradient-1);
+    background-image: var(--main-gradient);
+    background-clip: text; 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 42px;
+    overflow-wrap: break-word;
+  }
+}
+
+

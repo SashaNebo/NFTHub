@@ -10,7 +10,6 @@ const UIButtonLink = ({ to = '', text, icon, className, ...restProps }) => {
       className={clsx(cn['btn-link'], className)}
       to={to}
       {...restProps}>
-      
       <span className={cn['btn-link__text']}>{text}</span>
       <SvgIcon className={cn['btn-link__icon']} icon={icon} />
     </CustomLink>

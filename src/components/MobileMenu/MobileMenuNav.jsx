@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react'
 import clsx from 'clsx'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 import cn from './MobileMenu.module.scss'
 import { baseRoute } from '../../routes'
 import { SvgIcon } from '../SvgIcon'
-import { anNavList, anNavItem, anSubnavList, anSubnavItem } from './animation'
+import { anNavList, anNavItem } from './animation'
 import { navItems, subnavItems } from './additional'
 import { CustomLink } from '../../components/CustomLink'
 
@@ -38,7 +38,7 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
                   <SvgIcon icon={isOpen ? 'minus' : 'plus'} />
                 </button>
 
-                {isOpen && <MobileMenuSubnav />}
+                <MobileMenuSubnav isOpen={isOpen} />
               </>
             )}
           </motion.li>
@@ -48,26 +48,30 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
   )
 }
 
-const MobileMenuSubnav = () => {
+const MobileMenuSubnav = ({ isOpen }) => {
   return (
-    <motion.ul
-      className={cn['subnav']}
-      variants={anSubnavList}
-      initial='hidden'
-      animate='visible'>
-      {subnavItems.map(({ link, text }) => (
-        <motion.li
-          className={cn['subnav__item']}
-          key={link}
-          variants={anSubnavItem}>
-          <CustomLink
-            className={cn['subnav__link']}
-            to={`${baseRoute}/${link}`}>
-            {text}
-          </CustomLink>
-        </motion.li>
-      ))}
-    </motion.ul>
+    <AnimatePresence>
+      {isOpen && (
+        <motion.ul
+          className={cn['subnav']}
+          initial={{ height: 0 }}
+          animate={{ height: 'auto'}}
+          exit={{ height: 0, opacity: .5 }}
+          transition={{
+            type: 'tween',
+          }}>
+          {subnavItems.map(({ link, text }) => (
+            <li className={cn['subnav__item']} key={link}>
+              <CustomLink
+                className={cn['subnav__link']}
+                to={`${baseRoute}/${link}`}>
+                {text}
+              </CustomLink>
+            </li>
+          ))}
+        </motion.ul>
+      )}
+    </AnimatePresence>
   )
 }
 

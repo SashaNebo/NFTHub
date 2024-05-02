@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import cn from './Header.module.scss'
-import { SvgIcon } from '../../SvgIcon'
-import { ModalWallet } from '../../ModalWallet/ModalWallet'
+import { SvgIcon } from '../SvgIcon'
+import { ModalWallet } from '../ModalWallet/ModalWallet'
 
 const HeaderSocial = () => {
   const socialItems = ['twitter', 'discord', 'instagram', 'wallet']

@@ -3,14 +3,14 @@ import clsx from 'clsx'
 
 import cn from './Header.module.scss'
 import { HeaderContent } from './HeaderContent'
-import { useHeaderSticky } from '../../../hooks/useHeaderSticky'
+import { useHeaderSticky } from '../../hooks/useHeaderSticky'
 
 const Header = () => {
   const headerRef = useRef()
   const sticky = useHeaderSticky(headerRef)
 
   return (
-    <>
+    <header>
       <div className={clsx(cn['header'], cn[sticky])}>
         <div className='container'>
           <HeaderContent />
@@ -18,7 +18,7 @@ const Header = () => {
       </div>
 
       <div ref={headerRef} />
-    </>
+    </header>
   )
 }
 

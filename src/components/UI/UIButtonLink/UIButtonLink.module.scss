@@ -1,10 +1,11 @@
 .btn-link {
+  position: relative;
   width: fit-content;
   display: flex;
   column-gap: 10px;
-  background: var(--gradient-warm);
   border-radius: 50px;
   padding: 21px 40px;
+  background-image: var(--main-gradient);
   transition: var(--trans-3);
 
   &__text {
@@ -38,3 +39,4 @@
     }
   }
 }
+

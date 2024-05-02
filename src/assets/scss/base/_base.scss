@@ -23,3 +23,7 @@ button:focus-visible {
 svg {
   fill: var(--fill);
 }
+
+#root {
+  overflow-x: hidden;
+}

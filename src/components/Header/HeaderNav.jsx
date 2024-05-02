@@ -1,6 +1,6 @@
 import cn from './Header.module.scss'
-import { baseRoute } from '../../../routes'
-import { CustomLink } from '../../CustomLink'
+import { baseRoute } from '../../routes'
+import { CustomLink } from '../CustomLink'
 
 const HeaderNav = () => {
   const navItems = [

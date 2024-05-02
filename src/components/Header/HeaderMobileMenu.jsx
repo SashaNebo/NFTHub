@@ -1,6 +1,6 @@
 import cn from './Header.module.scss'
-import { SvgIcon } from '../../SvgIcon'
-import { MobileMenu } from '../../MobileMenu/MobileMenu'
+import { SvgIcon } from '../SvgIcon'
+import { MobileMenu } from '../MobileMenu/MobileMenu'
 
 import { useCycle } from 'framer-motion'
 

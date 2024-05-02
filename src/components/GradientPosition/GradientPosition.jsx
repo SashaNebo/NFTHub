@@ -1,5 +1,5 @@
 import cn from './GradientPosition.module.scss'
-import gradientCircleImg from '../../assets/images/svg/gradient-circle.svg'
+import gradientCircleImg from '../../assets/images/svg/other/gradient-circle.svg'
 
 const GradientPosition = () => {
   return (

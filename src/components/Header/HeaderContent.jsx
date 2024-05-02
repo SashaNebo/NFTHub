@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 
 import cn from './Header.module.scss'
-import { SvgIcon } from '../../SvgIcon'
-import { baseRoute } from '../../../routes'
+import { SvgIcon } from '../SvgIcon'
+import { baseRoute } from '../../routes'
 import { HeaderNav } from './HeaderNav'
 import { HeaderSocial } from './HeaderSocial'
 import { HeaderMobileMenu } from './HeaderMobileMenu'
