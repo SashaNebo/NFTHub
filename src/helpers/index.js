@@ -12,3 +12,5 @@ export const portal = document.getElementById('portal')
 // 992px
 // 768px
 // 576px
+
+// [data-theme="dark"]

@@ -5,23 +5,20 @@ import dividerImg from '../../assets/images/svg/other/divider.svg'
 
 const Divider = () => {
   return (
-    <motion.section className={cn['divider']}
-    
+    <motion.section
+      className={cn['divider']}
       initial={{
         scale: 0,
-        y: -50
+        y: -50,
       }}
 
-      whileInView={
-        { scale: 1, y: 0 }
-     }
-      
+      whileInView={{ scale: 1, y: 0 }}
+      viewport={{once: true}}
+
       transition={{
-        delay: .3,
-        ease: 'circOut'
-      }}
-    
-    >
+        delay: 0.3,
+        ease: 'circOut',
+      }}>
       <img src={dividerImg} alt='divider' />
     </motion.section>
   )

@@ -4,19 +4,21 @@ import { CollectionSwiper } from './CollectionSwiper'
 
 const Collection = () => {
   return (
-    <div className={cn['collection']}>
-      <div className='container'>
-        <div className={cn['collection__content']}>
-          <UIGradientTitle
-            className={cn['collection__title']}
-            text="Nerko's"
-            gradientText='collection'
-          />
+    <section className={cn['collection']}>
+      <div className={cn['collection__wrapper']}>
+        <div className='container'>
+          <div className={cn['collection__content']}>
+            <UIGradientTitle
+              className={cn['collection__title']}
+              text="Nerko's"
+              gradientText='collection'
+            />
 
-          <CollectionSwiper />
+            <CollectionSwiper />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,6 +1,8 @@
 .collection {
-  padding-top: 120px;
-  padding-bottom: 130px;
+
+  &__wrapper {
+    padding: 120px 0 130px 0;
+  }
 
   &__title {
     text-align: center;
@@ -117,6 +119,13 @@
 }
 
 @media (max-width: 1200px) {
+  .collection {
+    
+    &__wrapper {
+      padding: 110px 0px 120px 0px;
+    }
+  }
+
   .carousel {
 
     &__item {

@@ -17,3 +17,10 @@ export const slides = [
   { img: art7, name: '#Paradise', author: 'By CryptoX' },
   { img: art8, name: '#HighTown', author: 'By TheSalvare' },
 ]
+
+export const getTranslateX = (element) => {
+  const computedStyle = window.getComputedStyle(element)
+  const transform = computedStyle.transform
+  const translateX = parseFloat(transform.split(',')[4])
+  return isNaN(translateX) ? 0 : translateX
+}

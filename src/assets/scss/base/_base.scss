@@ -16,6 +16,14 @@ body {
   transition: background-color .1s linear ;
 }
 
+p {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--fc-text);
+}
+
 button:focus-visible {
  outline-offset: 3px;
 }

@@ -4,7 +4,7 @@ import { motion, useAnimation } from 'framer-motion'
 import cn from './Collection.module.scss'
 import { SvgIcon } from '../SvgIcon'
 import { CustomLink } from '../CustomLink'
-import { slides } from './additional'
+import { getTranslateX, slides } from './additional'
 import { UIButtonLink } from '../../components/UI/UIButtonLink'
 import { baseRoute } from '../../routes'
 
@@ -53,13 +53,6 @@ const CollectionSwiper = () => {
       remainder > itemWidth / 2 || isLimit ? currentStep + 1 : currentStep + 2
 
     scrollToSlide(nextStep)
-  }
-
-  function getTranslateX(element) {
-    const computedStyle = window.getComputedStyle(element)
-    const transform = computedStyle.transform
-    const translateX = parseFloat(transform.split(',')[4])
-    return isNaN(translateX) ? 0 : translateX
   }
 
   return (
