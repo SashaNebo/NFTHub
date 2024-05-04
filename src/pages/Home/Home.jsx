@@ -3,6 +3,7 @@ import { Brand } from '../../components/Brand'
 import { Divider } from '../../components/Divider/Divider'
 import { Collection } from '../../components/Collection/Collection'
 import { Choose } from '../../components/Choose/Choose'
+import { Fact } from '../../components/Fact/Fact'
 
 const Home = () => {
   return (
@@ -14,6 +15,8 @@ const Home = () => {
       <Divider />
       <Choose />
       <Divider />
+      <Fact />
+      {/* <Divider /> */}
     </>
   )
 }

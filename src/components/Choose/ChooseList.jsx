@@ -24,20 +24,17 @@ const ChooseList = () => {
   )
 }
 
-const Decorations = () => {
-
-  return (
-    <div>
-      {decorations.map((item, i) => (
-        <img
-          className={[cn['decoration'], cn[`decoration-${i + 1}`]].join(' ')}
-          src={item}
-          alt='img'
-          key={item}
-        />
-      ))}
-    </div>
-  )
-}
+const Decorations = () => (
+  <div>
+    {decorations.map((item, i) => (
+      <img
+        className={[cn['decoration'], cn[`decoration-${i + 1}`]].join(' ')}
+        src={item}
+        alt='img'
+        key={item}
+      />
+    ))}
+  </div>
+)
 
 export { ChooseList }

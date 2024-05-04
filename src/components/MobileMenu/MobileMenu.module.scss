@@ -80,7 +80,7 @@
     color: var(--tg-heading-color);
     padding: 10px 20px;
 
-    &:hover {
+    &:hover, &.active {
       color: var(--primary);
     }
   }
@@ -209,6 +209,11 @@ button.dropdown-btn.open {
     &__link:hover {
       color: var(--white);
       opacity: .5;
+    }
+
+    &__link.active {
+      color: var(--primary);
+      opacity: 1;
     }
   }
 

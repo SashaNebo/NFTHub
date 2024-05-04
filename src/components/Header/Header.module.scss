@@ -164,9 +164,17 @@
     box-shadow: none;
   }
 
-  & .nav__item:hover .nav__link {
-    color: var(--white);
-    opacity: .5;
+  & .nav__item {
+    
+    &:hover .nav__link {
+      color: var(--white);
+      opacity: .5;
+    }
+
+    &:hover .nav__link.active {
+      color: var(--primary);
+      opacity: 1;
+    }
   }
 
   & .subnav {
@@ -179,6 +187,11 @@
       &:hover {
         color: var(--white);
         opacity: .5;
+      }
+
+      &.active:hover {
+        color: var(--primary);
+        opacity: 1;
       }
     }
   }

@@ -25,7 +25,10 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
             className={cn['nav__item']}
             key={link}
             variants={anNavItem}>
-            <CustomLink className={cn['nav__link']} to={`${baseRoute}/${link}`}>
+            <CustomLink
+              className={cn['nav__link']}
+              activeClassName={cn['active']}
+              to={`${baseRoute}/${link}`}>
               {text}
             </CustomLink>
 
@@ -64,6 +67,7 @@ const MobileMenuSubnav = ({ isOpen }) => {
             <li className={cn['subnav__item']} key={link}>
               <CustomLink
                 className={cn['subnav__link']}
+                activeClassName={cn['active']}
                 to={`${baseRoute}/${link}`}>
                 {text}
               </CustomLink>
