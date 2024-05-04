@@ -3,8 +3,8 @@ import img2 from '../../assets/images/svg/choose/i-2.svg'
 import img3 from '../../assets/images/svg/choose/i-3.svg'
 import img4 from '../../assets/images/svg/choose/i-4.svg'
 
-import d1 from '../../assets/images/png/decorations/circle-01.png'
-import d2 from '../../assets/images/png/decorations/circle-02.png'
+import d1 from '../../assets/images/png/decorations/circle-1.png'
+import d2 from '../../assets/images/png/decorations/circle-2.png'
 import d3 from '../../assets/images/png/decorations/x.png'
 
 export const chooseItems = [

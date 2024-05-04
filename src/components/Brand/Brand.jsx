@@ -38,7 +38,7 @@ const Brand = () => {
                   <img src={wallet} alt='wallet' decoding="async" />
                 </CustomLink>
 
-                <CustomLink className={[cn['brand__link'], cn['dark']]} to={baseRoute}>
+                <CustomLink className={[cn['brand__link'], cn['dark']].join(' ')} to={baseRoute}>
                   <img src={walletsLight[i]} alt='wallet' decoding="async" />
                 </CustomLink>
               </li>

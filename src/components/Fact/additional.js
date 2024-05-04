@@ -1,5 +1,5 @@
-import bitcoinImg from '../../assets/images/png/decorations/bitcoin-01.png'
-import ethereumImg from '../../assets/images/png/decorations/ethereum-01.png'
+import bitcoinImg from '../../assets/images/png/decorations/bitcoin-1.png'
+import ethereumImg from '../../assets/images/png/decorations/ethereum-1.png'
 
 export const factItems = [
   {title: '400k+', text: 'Wallets Connected'},

@@ -4,6 +4,7 @@ import { Divider } from '../../components/Divider/Divider'
 import { Collection } from '../../components/Collection/Collection'
 import { Choose } from '../../components/Choose/Choose'
 import { Fact } from '../../components/Fact/Fact'
+import { About } from '../../components/About/About'
 
 const Home = () => {
   return (
@@ -16,7 +17,8 @@ const Home = () => {
       <Choose />
       <Divider />
       <Fact />
-      {/* <Divider /> */}
+      <Divider />
+      <About />
     </>
   )
 }

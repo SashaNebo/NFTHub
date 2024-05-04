@@ -2,7 +2,9 @@
   font-size: 64px;
   font-weight: 700;
   line-height: 1;
+  text-align: center;
   color: var(--fc-base);
+  padding: 0 15px;
 
   &__gradient {
     background-color: var(--gradient-1);
@@ -31,5 +33,3 @@
     overflow-wrap: break-word;
   }
 }
-
-
