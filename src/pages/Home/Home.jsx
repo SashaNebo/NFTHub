@@ -6,6 +6,7 @@ import { Choose } from '../../components/Choose/Choose'
 import { Fact } from '../../components/Fact/Fact'
 import { About } from '../../components/About/About'
 import { News } from '../../components/News'
+import { Roadmap } from '../../components/Roadmap/Roadmap'
 
 const Home = () => {
   return (
@@ -22,6 +23,8 @@ const Home = () => {
       <About />
       <Divider />
       <News />
+      <Divider />
+      <Roadmap />
     </>
   )
 }
