@@ -7,6 +7,7 @@ import { Fact } from '../../components/Fact/Fact'
 import { About } from '../../components/About/About'
 import { News } from '../../components/News'
 import { Roadmap } from '../../components/Roadmap/Roadmap'
+import { Team } from '../../components/Team/Team'
 
 const Home = () => {
   return (
@@ -25,6 +26,8 @@ const Home = () => {
       <News />
       <Divider />
       <Roadmap />
+      <Divider />
+      <Team />
     </>
   )
 }

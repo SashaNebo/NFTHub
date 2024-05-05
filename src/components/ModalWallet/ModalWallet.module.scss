@@ -207,8 +207,12 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 778px) {
   .modal {
-    margin: 0 20px;
+    margin: 20px 15px 0;
+
+    &__wrapper {
+      padding: 40px 25px;
+    }
   }
 }
