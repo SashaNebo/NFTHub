@@ -22,9 +22,10 @@ const Team = () => {
                   <div className={cn['team__item-photo']}>
                     <img src={photo} alt='photo img' />
                   </div>
-                  
+
                   <h4 className={cn['team__item-name']}>{name}</h4>
                   <span className={cn['team__item-job']}>{job}</span>
+                  
                   <ul className={cn['team__item-social']}>
                     {socialList.map((soc) => (
                       <li key={soc}>

@@ -8,6 +8,7 @@ import { About } from '../../components/About/About'
 import { News } from '../../components/News'
 import { Roadmap } from '../../components/Roadmap/Roadmap'
 import { Team } from '../../components/Team/Team'
+import { Faq } from '../../components/Faq/Faq'
 
 const Home = () => {
   return (
@@ -28,6 +29,8 @@ const Home = () => {
       <Roadmap />
       <Divider />
       <Team />
+      <Divider />
+      <Faq />
     </>
   )
 }
