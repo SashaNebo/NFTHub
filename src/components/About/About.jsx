@@ -1,13 +1,24 @@
+import { useContext, useEffect, useRef } from 'react'
+
 import cn from './About.module.scss'
 import { aboutItems } from './additional'
 import { UIGradientTitle } from '../UI/UIGradientTitle'
 import { CustomLink } from '../../components/CustomLink'
 import { UIGradientText } from '../UI/UIGradientText'
 import { SvgIcon } from '../../components/SvgIcon'
+import { SectionsContext } from '../../context'
 
 const About = () => {
+  const aboutRef = useRef()
+  const { setSections } = useContext(SectionsContext)
+
+  useEffect(() => {
+    aboutRef &&
+      setSections({ node: aboutRef.current, id: 'about' })
+  }, [])
+
   return (
-    <section className={cn['about']}>
+    <section className={cn['about']} ref={aboutRef}>
       <div className={cn['about__wrapper']}>
         <div className='container'>
           <div className={cn['about__content']}>

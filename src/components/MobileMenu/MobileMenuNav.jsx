@@ -3,13 +3,14 @@ import clsx from 'clsx'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import cn from './MobileMenu.module.scss'
-import { baseRoute } from '../../routes'
 import { SvgIcon } from '../SvgIcon'
 import { anNavList, anNavItem } from './animation'
-import { navItems, subnavItems } from './additional'
 import { CustomLink } from '../../components/CustomLink'
+import { useScrollToSection } from '../../hooks/useScrollToSection'
+import { navLinks, subnavLinks } from '../../routes'
 
-const MobileMenuNav = ({ isOpenMobileMenu }) => {
+const MobileMenuNav = ({ isOpenMobileMenu, toggleOpenMobileMenu }) => {
+  const scrollToSection = useScrollToSection()
   const [isOpen, setIsOpen] = useState(false)
   const toggleIsOpen = () => setIsOpen((prevIsOpen) => !prevIsOpen)
 
@@ -20,7 +21,7 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
   return (
     <nav className={cn['nav']}>
       <motion.ul className={cn['nav__list']} variants={anNavList}>
-        {navItems.map(({ link, text }) => (
+        {navLinks.map(({ link, text }) => (
           <motion.li
             className={cn['nav__item']}
             key={link}
@@ -28,7 +29,11 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
             <CustomLink
               className={cn['nav__link']}
               activeClassName={cn['active']}
-              to={`${baseRoute}/${link}`}>
+              to={link}
+              onClick={() => {
+                toggleOpenMobileMenu()
+                scrollToSection(link)
+              }}>
               {text}
             </CustomLink>
 
@@ -41,7 +46,10 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
                   <SvgIcon icon={isOpen ? 'minus' : 'plus'} />
                 </button>
 
-                <MobileMenuSubnav isOpen={isOpen} />
+                <MobileMenuSubnav
+                  isOpen={isOpen}
+                  toggleOpenMobileMenu={toggleOpenMobileMenu}
+                />
               </>
             )}
           </motion.li>
@@ -51,24 +59,24 @@ const MobileMenuNav = ({ isOpenMobileMenu }) => {
   )
 }
 
-const MobileMenuSubnav = ({ isOpen }) => {
+const MobileMenuSubnav = ({ isOpen, toggleOpenMobileMenu }) => {
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.ul
           className={cn['subnav']}
           initial={{ height: 0 }}
-          animate={{ height: 'auto'}}
-          exit={{ height: 0, opacity: .5 }}
+          animate={{ height: 'auto' }}
+          exit={{ height: 0, opacity: 0.5 }}
           transition={{
             type: 'tween',
           }}>
-          {subnavItems.map(({ link, text }) => (
-            <li className={cn['subnav__item']} key={link}>
+          {subnavLinks.map(({ link, text }) => (
+            <li className={cn['subnav__item']} key={link} onClick={toggleOpenMobileMenu}>
               <CustomLink
                 className={cn['subnav__link']}
                 activeClassName={cn['active']}
-                to={`${baseRoute}/${link}`}>
+                to={link}>
                 {text}
               </CustomLink>
             </li>

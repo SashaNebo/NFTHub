@@ -14,6 +14,8 @@ body {
   color: var(--fc-base);
   background-color: var(--page-bg);
   transition: background-color .1s linear ;
+
+  scroll-behavior: smooth;
 }
 
 p {

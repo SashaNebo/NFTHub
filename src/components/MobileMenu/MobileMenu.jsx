@@ -38,7 +38,7 @@ const MobileMenu = ({ isOpen, toggleOpen }) => {
         variants={anMobileMenu}>
         <div className={cn['mobile-menu__content']}>
           <MobileMenuHeader toggleOpen={toggleOpen} />
-          <MobileMenuNav isOpenMobileMenu={isOpen} />
+          <MobileMenuNav isOpenMobileMenu={isOpen} toggleOpenMobileMenu={toggleOpen} />
           <MobileMenuSocial />
         </div>
       </motion.div>

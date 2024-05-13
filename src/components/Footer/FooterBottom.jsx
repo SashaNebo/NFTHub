@@ -1,7 +1,9 @@
 import cn from './Footer.module.scss'
 import { SvgIcon } from '../SvgIcon'
+import { CustomLink } from '../CustomLink'
 
-const FooterBottom = () => {
+const FooterBottom = ({ scrollToSection }) => {
+  
   return (
     <div className={cn['footer__bottom']}>
       <p className={cn['copyright']}>
@@ -10,9 +12,13 @@ const FooterBottom = () => {
       <div className={cn['precept']}>
         <p className={cn['privacy']}>Privacy policy</p>
         <p className={cn['terms']}>Terms of Use</p>
-        <button className={cn['back-top']} aria-label='button back top'>
+        <CustomLink
+          className={cn['back-top']}
+          aria-label='button back top'
+          to={'/nfthub/'}
+          onClick={() => scrollToSection('nfthub')}>
           <SvgIcon icon='arrowhead' />
-        </button>
+        </CustomLink>
       </div>
     </div>
   )

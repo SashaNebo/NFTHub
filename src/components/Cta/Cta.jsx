@@ -24,7 +24,7 @@ const Cta = () => {
 
               <UIButtonLink
                 className={cn['cta__btn']}
-                to={baseRoute + '/'}
+                to={baseRoute}
                 text='Get started'
                 icon='arrowUpRight'
               />

@@ -1,12 +1,23 @@
-import { UIGradientTitle } from '../UI/UIGradientTitle'
+import { useContext, useEffect, useRef } from 'react'
+
 import cn from './Roadmap.module.scss'
+import { UIGradientTitle } from '../UI/UIGradientTitle'
 import { roadmapItems } from './additional'
 import checkImg from '../../assets/images/svg/other/check.svg'
 import { UIGradientText } from '../UI/UIGradientText'
+import { SectionsContext } from '../../context'
 
 const Roadmap = () => {
+  const roadmapRef = useRef()
+  const { setSections } = useContext(SectionsContext)
+
+  useEffect(() => {
+    roadmapRef &&
+      setSections({ node: roadmapRef.current, id: 'roadmap' })
+  }, [])
+
   return (
-    <section className={cn['roadmap']}>
+    <section className={cn['roadmap']} ref={roadmapRef}>
       <div className={cn['roadmap__wrapper']}>
         <div className='container'>
           <div className={cn['roadmap__content']}>

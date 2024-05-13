@@ -13,7 +13,7 @@ const CustomLink = ({
       className={({ isActive }) =>
         isActive ? clsx(className, activeClassName) : className
       }
-      to={to} end
+      to={to} end={true}
       aria-label={`navigation link`}
       {...restProps}>
       {children}

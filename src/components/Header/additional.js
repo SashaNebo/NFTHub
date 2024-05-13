@@ -4,11 +4,3 @@
 //   { link: 'page-three', text: 'page three' },
 //   { link: 'page-four', text: 'page four' },
 // ]
-
-export const socialItems = [
-  'facebook',
-  'twitter',
-  'instagram',
-  'discord',
-  'telegram',
-]

@@ -6,12 +6,12 @@ import { SvgIcon } from '../../components/SvgIcon'
 import { CustomLink } from '../../components/CustomLink'
 import { baseRoute } from '../../routes'
 
-const FooterBody = () => {
+const FooterBody = ({ scrollToSection }) => {
   return (
     <div className={cn['footer__body']}>
       <ColOne />
-      <ColTwo />
-      <ColThree />
+      <ColTwo scrollToSection={scrollToSection} />
+      <ColThree scrollToSection={scrollToSection} />
     </div>
   )
 }
@@ -36,7 +36,7 @@ const ColOne = () => {
             className={cn['social__link']}
             href={`https:${item}.com`}
             target='_blank'
-            aria-label="social link"
+            aria-label='social link'
             key={item}>
             <SvgIcon icon={item} />
           </a>
@@ -46,12 +46,12 @@ const ColOne = () => {
   )
 }
 
-const ColTwo = () => {
+const ColTwo = ({ scrollToSection }) => {
   const links = [
     { link: 'about', text: 'About' },
     { link: 'collection', text: 'Collection' },
     { link: 'roadmap', text: 'Roadmap' },
-    { link: 'faqs', text: 'FAQs' },
+    { link: 'faq', text: 'FAQs' },
   ]
 
   return (
@@ -60,7 +60,10 @@ const ColTwo = () => {
       <ul className={cn['links']}>
         {links.map(({ link, text }) => (
           <li key={link}>
-            <CustomLink className={cn['link']} to={link}>
+            <CustomLink
+              className={cn['link']}
+              to={link}
+              onClick={() => scrollToSection(link)}>
               {text}
             </CustomLink>
           </li>
