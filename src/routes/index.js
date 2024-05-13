@@ -19,9 +19,14 @@ export const navLinks = [
   { link: faqPath, text: 'faq' },
 ]
 
+export const pageOnePath = `${basePath}/pages/page-one`
+export const pageTwoPath = `${basePath}/pages/page-two`
+export const pageThreePath = `${basePath}/pages/page-three`
+export const pageFourPath = `${basePath}/pages/page-four`
+
 export const subnavLinks = [
-  { link: `${basePath}/pages/page-one`, text: 'page one' },
-  { link: `${basePath}/pages/page-two`, text: 'page two' },
-  { link: `${basePath}/pages/page-three`, text: 'page three' },
-  { link: `${basePath}/pages/page-four`, text: 'page four' },
+  { link: pageOnePath, text: 'page one' },
+  { link: pageTwoPath, text: 'page two' },
+  { link: pageThreePath, text: 'page three' },
+  { link: pageFourPath, text: 'page four' },
 ]

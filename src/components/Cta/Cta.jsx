@@ -1,7 +1,7 @@
 import cn from './Cta.module.scss'
 import { UIGradientTitle } from '../../components/UI/UIGradientTitle'
 import { UIButtonLink } from '../../components/UI/UIButtonLink'
-import { baseRoute } from '../../routes'
+import { pageOnePath } from '../../routes'
 import { decorations } from './additional'
 
 const Cta = () => {
@@ -24,7 +24,7 @@ const Cta = () => {
 
               <UIButtonLink
                 className={cn['cta__btn']}
-                to={baseRoute}
+                to={pageOnePath}
                 text='Get started'
                 icon='arrowUpRight'
               />

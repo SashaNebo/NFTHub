@@ -95,6 +95,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+button, li {
+  -webkit-tap-highlight-color: transparent;
+}
+
 input:focus,
 input:active,
 button:focus,
