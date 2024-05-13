@@ -4,7 +4,8 @@ import cn from './Footer.module.scss'
 import logoImg from '../../assets/images/svg/other/gradient-nfthub.svg'
 import { SvgIcon } from '../../components/SvgIcon'
 import { CustomLink } from '../../components/CustomLink'
-import { baseRoute } from '../../routes'
+import { colTwoLinks, colThreeLinks } from './additional'
+import { basePath } from '../../routes'
 
 const FooterBody = ({ scrollToSection }) => {
   return (
@@ -21,7 +22,7 @@ const ColOne = () => {
 
   return (
     <div className={clsx(cn['col'], cn['col-1'])}>
-      <CustomLink className={cn['logo']} to={baseRoute}>
+      <CustomLink className={cn['logo']} to={basePath}>
         <img src={logoImg} alt='' />
       </CustomLink>
 
@@ -47,18 +48,11 @@ const ColOne = () => {
 }
 
 const ColTwo = ({ scrollToSection }) => {
-  const links = [
-    { link: 'about', text: 'About' },
-    { link: 'collection', text: 'Collection' },
-    { link: 'roadmap', text: 'Roadmap' },
-    { link: 'faq', text: 'FAQs' },
-  ]
-
   return (
     <div className={clsx(cn['col'], cn['col-2'])}>
       <h1 className={cn['title']}>Quick Link</h1>
       <ul className={cn['links']}>
-        {links.map(({ link, text }) => (
+        {colTwoLinks.map(({ link, text }) => (
           <li key={link}>
             <CustomLink
               className={cn['link']}
@@ -74,17 +68,11 @@ const ColTwo = ({ scrollToSection }) => {
 }
 
 const ColThree = () => {
-  const links = [
-    { link: 'how-it-works!', text: 'How it works!' },
-    { link: 'blockchain', text: 'Blockchain' },
-    { link: 'get-in-touch', text: 'Get in touch' },
-  ]
-
   return (
     <div className={clsx(cn['col'], cn['col-3'])}>
       <h1 className={cn['title']}>Community</h1>
       <ul className={cn['links']}>
-        {links.map(({ link, text }) => (
+        {colThreeLinks.map(({ link, text }) => (
           <li key={link}>
             <CustomLink className={cn['link']} to={link}>
               {text}

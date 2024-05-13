@@ -2,14 +2,14 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 import cn from './MobileMenu.module.scss'
-import { baseRoute } from '../../routes'
+import { basePath } from '../../routes'
 import { SvgIcon } from '../SvgIcon'
 import { anBtnClose } from './animation'
 
 const MobileMenuHeader = ({ toggleOpen }) => {
   return (
     <div className={cn['mobile-menu__header']}>
-      <Link className={cn['logo']} to={baseRoute}>
+      <Link className={cn['logo']} to={basePath}>
         <SvgIcon icon='nfthub' />
       </Link>
 

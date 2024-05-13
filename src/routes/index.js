@@ -1,7 +1,3 @@
-export const baseRoute = '/nfthub'
-
-// ---
-
 export const basePath = '/nfthub'
 export const collectionPath = `${basePath}/collection`
 export const choosePath = `${basePath}/choose`

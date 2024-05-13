@@ -1,6 +1,6 @@
 import cn from './Brand.module.scss'
 import { CustomLink } from '../../components/CustomLink'
-import { baseRoute } from '../../routes'
+import { basePath } from '../../routes'
 
 import metamask from '../../assets/images/svg/wallets-brands/metamask.svg'
 import metamaskLight from '../../assets/images/svg/wallets-brands/metamask-light.svg'
@@ -34,11 +34,11 @@ const Brand = () => {
           <ul className={cn['brand__list']}>
             {wallets.map((wallet, i) => (
               <li className={cn['brand__item']} key={wallet}>
-                <CustomLink className={cn['brand__link']} to={baseRoute}>
+                <CustomLink className={cn['brand__link']} to={basePath}>
                   <img src={wallet} alt='wallet' decoding="async" />
                 </CustomLink>
 
-                <CustomLink className={[cn['brand__link'], cn['dark']].join(' ')} to={baseRoute}>
+                <CustomLink className={[cn['brand__link'], cn['dark']].join(' ')} to={basePath}>
                   <img src={walletsLight[i]} alt='wallet' decoding="async" />
                 </CustomLink>
               </li>

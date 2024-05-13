@@ -6,7 +6,7 @@ import { SvgIcon } from '../SvgIcon'
 import { CustomLink } from '../CustomLink'
 import { getTranslateX, slides } from './additional'
 import { UIButtonLink } from '../../components/UI/UIButtonLink'
-import { baseRoute } from '../../routes'
+import { basePath } from '../../routes'
 
 const CollectionSwiper = () => {
   const controls = useAnimation()
@@ -79,7 +79,7 @@ const CollectionSwiper = () => {
         <UIButtonLink
           text='View collection'
           icon='arrowUpRight'
-          to={baseRoute}
+          to={basePath}
         />
       </div>
     </div>
