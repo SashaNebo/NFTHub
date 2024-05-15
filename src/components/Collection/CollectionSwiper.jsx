@@ -67,7 +67,6 @@ const CollectionSwiper = () => {
             whileTap={{ cursor: 'grabbing' }}
             whileHover={{ cursor: 'grab' }}
             animate={controls}>
-            
             <Slides itemRef={itemRef} />
           </motion.div>
         </div>

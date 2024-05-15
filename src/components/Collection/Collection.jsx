@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef } from 'react'
 
 import cn from './Collection.module.scss'
-import { UIGradientTitle } from '../../components/UI/UIGradientTitle'
 import { CollectionSwiper } from './CollectionSwiper'
 import { SectionsContext } from '../../context'
+import { MGradientTitle } from '../UI/UIGradientTitle/UIGradientTitle'
 
 const Collection = () => {
   const collectionRef = useRef()
@@ -19,7 +19,7 @@ const Collection = () => {
       <div className={cn['collection__wrapper']}>
         <div className='container'>
           <div className={cn['collection__content']}>
-            <UIGradientTitle
+            <MGradientTitle
               className={cn['collection__title']}
               text="Nerko's"
               gradientText='collection'

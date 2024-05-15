@@ -1,49 +1,55 @@
+import { motion } from 'framer-motion'
+
 import cn from './Brand.module.scss'
 import { CustomLink } from '../../components/CustomLink'
 import { basePath } from '../../routes'
 
-import metamask from '../../assets/images/svg/wallets-brands/metamask.svg'
-import metamaskLight from '../../assets/images/svg/wallets-brands/metamask-light.svg'
+import { wallets, walletsLight } from './additional'
 
-import bitgo from '../../assets/images/svg/wallets-brands/bitgo.svg'
-import bitgoLight from '../../assets/images/svg/wallets-brands/bitgo-light.svg'
+// REFACTOR
+const anBrandList = {
+  inView: (i) => ({
+    scale: 1,
+    transition: {
+      delay: i * 0.1,
+    },
+  }),
 
-import coinbase from '../../assets/images/svg/wallets-brands/coinbase.svg'
-import coinbaseLight from '../../assets/images/svg/wallets-brands/coinbase-light.svg'
-
-import trust from '../../assets/images/svg/wallets-brands/trust.svg'
-import trustLight from '../../assets/images/svg/wallets-brands/trust-light.svg'
-
-import exodus from '../../assets/images/svg/wallets-brands/exodus.svg'
-import exodusLight from '../../assets/images/svg/wallets-brands/exodus-light.svg'
+  hidden: {
+    scale: 0,
+  },
+}
 
 const Brand = () => {
-  const wallets = [metamask, bitgo, coinbase, trust, exodus]
-  const walletsLight = [
-    metamaskLight,
-    bitgoLight,
-    coinbaseLight,
-    trustLight,
-    exodusLight,
-  ]
 
   return (
     <section className={cn['brand']}>
       <div className='container'>
         <div className={cn['brand__content']}>
-          <ul className={cn['brand__list']}>
+          <motion.ul
+            className={cn['brand__list']}
+            initial='hidden'
+            whileInView='inView'
+            viewport={{ once: true, margin: '-100px 0px' }}
+          >
             {wallets.map((wallet, i) => (
-              <li className={cn['brand__item']} key={wallet}>
+              <motion.li
+                className={cn['brand__item']}
+                key={wallet}
+                variants={anBrandList}
+                custom={i}>
                 <CustomLink className={cn['brand__link']} to={basePath}>
-                  <img src={wallet} alt='wallet' decoding="async" />
+                  <img src={wallet} alt='wallet' decoding='async' />
                 </CustomLink>
 
-                <CustomLink className={[cn['brand__link'], cn['dark']].join(' ')} to={basePath}>
-                  <img src={walletsLight[i]} alt='wallet' decoding="async" />
+                <CustomLink
+                  className={[cn['brand__link'], cn['dark']].join(' ')}
+                  to={basePath}>
+                  <img src={walletsLight[i]} alt='wallet' decoding='async' />
                 </CustomLink>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </div>
     </section>

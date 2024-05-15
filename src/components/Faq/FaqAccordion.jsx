@@ -9,8 +9,15 @@ import { SvgIcon } from '../SvgIcon'
 const FaqAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
+  // REFACTOR
   return (
-    <div className={cn['accordion']}>
+    <motion.div
+      className={cn['accordion']}
+      initial={{ y: 100 }}
+      whileInView={{ y: 0 }}
+      transition={{ duration: 0.5, type: 'spring' }}
+      viewport={{once: true, margin: '-300px 0px'}}
+    >
       <div className={cn['accordion__content']}>
         <div className={cn['accordion__list']}>
           {faqItems.map(({ question, text1, text2 }, i) => (
@@ -50,7 +57,7 @@ const FaqAccordion = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

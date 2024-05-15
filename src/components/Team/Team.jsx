@@ -1,8 +1,8 @@
 import cn from './Team.module.scss'
-import { UIGradientTitle } from '../UI/UIGradientTitle'
 import { teamItems } from './additional'
 import { CustomLink } from '../../components/CustomLink'
 import { SvgIcon } from '../../components/SvgIcon'
+import { MGradientTitle } from '../UI/UIGradientTitle/UIGradientTitle'
 
 const Team = () => {
   return (
@@ -10,7 +10,7 @@ const Team = () => {
       <div className={cn['team__wrapper']}>
         <div className='container'>
           <div className={cn['team__content']}>
-            <UIGradientTitle
+            <MGradientTitle
               className={cn['team__title']}
               text='Meet'
               gradientText='the artists'

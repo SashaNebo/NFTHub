@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import cn from './Hero.module.scss'
 import person1 from '../../assets/images/png/artists/artist-1.png'
 import person2 from '../../assets/images/png/artists/artist-2.png'
@@ -6,7 +8,23 @@ import { UIButtonLink } from '../UI/UIButtonLink/UIButtonLink'
 
 const HeroInformation = () => {
   return (
-    <div className={cn['information']}>
+    <motion.div className={cn['information']}
+      initial={{
+        scale: 0,
+        x: -1000
+      }}
+      
+      animate={{
+        scale: 1,
+        x: 0
+      }}
+
+      transition={{
+        duration: 0.5,
+        type: 'spring',
+      }}
+
+    >
       <h1 className={cn['information__title']}>High Quality NFT Collection</h1>
       <p className={cn['information__desc']}>
         A 890 piece custom Nerko's collection is joining the NFT space on
@@ -21,7 +39,7 @@ const HeroInformation = () => {
       />
 
       <Community />
-    </div>
+    </motion.div>
   )
 }
 

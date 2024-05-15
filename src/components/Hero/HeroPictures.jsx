@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import clsx from 'clsx'
 
 import cn from './Hero.module.scss'
@@ -14,10 +15,24 @@ import squareRound from '../../assets/images/svg/shapes/square-round.svg'
 
 const HeroPictures = () => {
   return (
-    <div className={cn['pictures']}>
+    <motion.div className={cn['pictures']}  initial={{
+      scale: 0,
+      x: 1000
+    }}
+    
+    animate={{
+      scale: 1,
+      x: 0
+    }}
+
+    transition={{
+      duration: 0.5,
+      type: 'spring'
+      }}
+    >
       <PicturesGrid />
       <Shapes />
-    </div>
+    </motion.div>
   )
 }
 

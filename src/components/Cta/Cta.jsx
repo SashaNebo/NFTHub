@@ -1,8 +1,8 @@
 import cn from './Cta.module.scss'
-import { UIGradientTitle } from '../../components/UI/UIGradientTitle'
 import { UIButtonLink } from '../../components/UI/UIButtonLink'
 import { pageOnePath } from '../../routes'
 import { decorations } from './additional'
+import { MGradientTitle } from '../UI/UIGradientTitle/UIGradientTitle'
 
 const Cta = () => {
   return (
@@ -12,7 +12,7 @@ const Cta = () => {
         <div className='container'>
           <div className={cn['cta__content']}>
             <div className={cn['cta__info']}>
-              <UIGradientTitle
+              <MGradientTitle
                 className={cn['cta__title']}
                 text="Let's start"
                 gradientText='minting'

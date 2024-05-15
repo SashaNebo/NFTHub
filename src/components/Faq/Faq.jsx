@@ -1,9 +1,9 @@
 import { useContext, useEffect, useRef } from 'react'
 
 import cn from './Faq.module.scss'
-import { UIGradientTitle } from '../UI/UIGradientTitle'
 import { FaqAccordion } from './FaqAccordion'
 import { SectionsContext } from '../../context'
+import { MGradientTitle } from '../UI/UIGradientTitle/UIGradientTitle'
 
 const Faq = () => {
   const faqRef = useRef()
@@ -18,7 +18,7 @@ const Faq = () => {
       <div className={cn['faq__wrapper']}>
         <div className='container'>
           <div className={cn['faq__content']}>
-            <UIGradientTitle
+            <MGradientTitle
               className={cn['faq__title']}
               text='Your questions,'
               gradientText='answered!'
