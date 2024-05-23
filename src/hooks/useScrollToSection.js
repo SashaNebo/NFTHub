@@ -1,8 +1,12 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { SectionsContext } from '../context'
 
 const useScrollToSection = () => {
   const { sections } = useContext(SectionsContext)
+
+  useEffect(() => {
+    console.log(sections);
+  }, [])
 
   return (link) => {
     sections.forEach(({ node, id }) => {
