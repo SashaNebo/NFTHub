@@ -1,21 +1,9 @@
 import clsx from 'clsx'
 
 import cn from './SvgIcon.module.scss'
-import sprite from '../../assets/images/icons/sprite.svg'
+import sprite from '../../assets/images/svg/sprite.svg'
 
-/* <!-- Sprite icons --> */
-
-// discord
-// instagram
-// twitter
-// wallet
-// tickDown
-// tickUp
-// tickSlider
-// NFTHub
-// arrowDiagonal
-
-const SvgIcon = ({ icon = 'NFTHub', className, ...restProps }) => {
+const SvgIcon = ({ icon = 'nfthub', className, ...restProps }) => {
   
   return (
     <svg className={clsx(cn['svg'], className)} {...restProps}>
@@ -25,3 +13,27 @@ const SvgIcon = ({ icon = 'NFTHub', className, ...restProps }) => {
 }
 
 export { SvgIcon }
+
+/* <!-- Sprite icons --> */
+
+/* -----
+
+discord
+instagram
+twitter
+telegram
+facebook
+youtube
+wallet
+nfthub
+sun
+moon
+btnOpenMobileMenu
+btnCloseMobileMenu
+plus
+minus
+tickRight
+arrowhead
+arrowUpRight
+
+----- */

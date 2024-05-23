@@ -1,22 +1,39 @@
-import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 import cn from './Header.module.scss'
-import { socialList } from './additional'
 import { SvgIcon } from '../SvgIcon'
+import { ModalWallet } from '../ModalWallet/ModalWallet'
 
 const HeaderSocial = () => {
+  const socialItems = ['twitter', 'discord', 'instagram', 'wallet']
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
   return (
     <ul className={cn['social']}>
-      {socialList.map((social) => (
-        <li className={cn['social__item']} key={social}>
-          <Link
-            to={`https://${social}.com`}
-            className={cn['social__link']}
-            target='_blank'>
-            <SvgIcon className={cn['social__icon']} icon={social} />
-          </Link>
+      {socialItems.map((socialItem) => (
+        <li className={cn['social__item']} key={socialItem}>
+          <>
+            {socialItem === 'wallet' ? (
+              <button
+                className={cn['social__link']}
+                onClick={() => setIsOpenModal(true)}
+                aria-label='button open modal wallet'>
+                <SvgIcon icon={socialItem} />
+              </button>
+            ) : (
+              <a
+                className={cn['social__link']}
+                href={`https://${socialItem}.com`}
+                target='_blank'
+                aria-label='social link'>
+                <SvgIcon icon={socialItem} />
+              </a>
+            )}
+          </>
         </li>
       ))}
+
+      <ModalWallet isOpen={isOpenModal} onClose={() => setIsOpenModal(false)} />
     </ul>
   )
 }

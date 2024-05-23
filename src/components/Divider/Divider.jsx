@@ -1,15 +1,26 @@
-import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 import cn from './Divider.module.scss'
-import divider from '../../assets/images/icons/divider.svg'
+import dividerImg from '../../assets/images/svg/other/divider.svg'
 
-const Divider = ({ className }) => {
+const Divider = () => {
   return (
-    <div className={cn['divider']}>
-      <div className={clsx(cn['divider__wrapper'], className)}>
-        <img src={divider} alt='divider' />
-      </div>
-    </div>
+    <motion.section
+      className={cn['divider']}
+      initial={{
+        scale: 0,
+        y: -50,
+      }}
+
+      whileInView={{ scale: 1, y: 0 }}
+      viewport={{once: true}}
+
+      transition={{
+        delay: 0.3,
+        ease: 'circOut',
+      }}>
+      <img src={dividerImg} alt='divider' />
+    </motion.section>
   )
 }
 

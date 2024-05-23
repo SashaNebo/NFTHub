@@ -1,24 +1,32 @@
+import { useContext, useEffect, useRef } from 'react'
+
 import cn from './Hero.module.scss'
-import { Divider } from '../Divider'
-import { Container } from '../Container'
-import { HeroContent } from './HeroContent'
-import { HeroWallets } from './HeroWallets'
-import { HeroThemeMode } from './HeroThemeMode'
+import { HeroInformation } from './HeroInformation'
+import { HeroPictures } from './HeroPictures'
+import { SectionsContext } from '../../context'
 
 const Hero = () => {
+  const heroRef = useRef()
+  const { setSections, clearSections } = useContext(SectionsContext)
+
+  useEffect(() => {
+    heroRef && setSections({ node: heroRef.current, id: 'nfthub' })
+
+    return () => clearSections()
+  }, [])
+
   return (
-    <>
-      <main className={cn['hero']}>
-        <Container>
-          <HeroContent />
-        </Container>
-
-        <HeroWallets />
-        <HeroThemeMode />
-      </main>
-
-      <Divider />
-    </>
+    <section className={cn['hero']} ref={heroRef}>
+      <div className={cn['hero__bg']}></div>
+      <div className={cn['hero__inner']}>
+        <div className='container'>
+          <div className={cn['hero__content']}>
+            <HeroInformation />
+            <HeroPictures />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

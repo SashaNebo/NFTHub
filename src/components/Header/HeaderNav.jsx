@@ -1,21 +1,47 @@
-import { Link } from 'react-router-dom'
-
 import cn from './Header.module.scss'
-import { navList } from './additional'
+import { CustomLink } from '../CustomLink'
+import { useScrollToSection } from '../../hooks/useScrollToSection'
+import { navLinks, subnavLinks } from '../../routes'
 
 const HeaderNav = () => {
+  const scrollToSection = useScrollToSection()
+
   return (
     <nav className={cn['nav']}>
       <ul className={cn['nav__list']}>
-        {navList.map((navItem) => (
-          <li className={cn['nav__item']} key={navItem}>
-            <Link to={`/${navItem}`} className={cn['nav__link']}>
-              {navItem}
-            </Link>
+        {navLinks.map(({ link, text }) => (
+          <li
+            className={cn['nav__item']}
+            key={link}
+            onClick={() => scrollToSection(link)}>
+            <CustomLink
+              className={cn['nav__link']}
+              activeClassName={cn['active']}
+              to={link}>
+              {text}
+            </CustomLink>
+            {text === 'home' && <Subnav />}
           </li>
         ))}
       </ul>
     </nav>
+  )
+}
+
+const Subnav = () => {
+  return (
+    <ul className={cn['subnav']}>
+      {subnavLinks.map(({ link, text }) => (
+        <li className={cn['subnav__item']} key={link}>
+          <CustomLink
+            className={cn['subnav__link']}
+            activeClassName={cn['active']}
+            to={link}>
+            {text}
+          </CustomLink>
+        </li>
+      ))}
+    </ul>
   )
 }
 

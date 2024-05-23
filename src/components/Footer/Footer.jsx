@@ -1,12 +1,19 @@
 import cn from './Footer.module.scss'
-import footerBgImg from '../../assets/images/img/footer-bg.png'
+import { FooterBody } from './FooterBody'
+import { FooterBottom } from './FooterBottom'
+import { useScrollToSection } from '../../hooks/useScrollToSection'
 
 const Footer = () => {
-  
+  const scrollToSection = useScrollToSection()
+
   return (
     <footer className={cn['footer']}>
-      <h1>Footer</h1>
-      <img src={footerBgImg} alt="" />
+      <div className='container'>
+        <div className='footer__content'>
+          <FooterBody scrollToSection={scrollToSection} />
+          <FooterBottom scrollToSection={scrollToSection}  />
+        </div>
+      </div>
     </footer>
   )
 }

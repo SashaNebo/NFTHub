@@ -19,6 +19,11 @@ a:visited {
 
 a {
   color: inherit;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
 }
 
 a:hover {
@@ -47,7 +52,7 @@ p {
 }
 
 ul,
-ul li {
+ol li {
   list-style: none;
 }
 
@@ -74,6 +79,7 @@ select {
   font-size: inherit;
   color: inherit;
   background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input::-ms-clear {
@@ -87,6 +93,10 @@ input[type="submit"] {
   background-color: transparent;
   background: none;
   cursor: pointer;
+}
+
+button, li {
+  -webkit-tap-highlight-color: transparent;
 }
 
 input:focus,

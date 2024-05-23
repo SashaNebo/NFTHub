@@ -2,22 +2,21 @@ import { Link } from 'react-router-dom'
 
 import cn from './Header.module.scss'
 import { SvgIcon } from '../SvgIcon'
+import { basePath } from '../../routes'
 import { HeaderNav } from './HeaderNav'
 import { HeaderSocial } from './HeaderSocial'
-import { Example } from './motion/Example'
-import { Navbar } from './Navbar'
+import { HeaderMobileMenu } from './HeaderMobileMenu'
 
 const HeaderContent = () => {
   return (
     <div className={cn['header__content']}>
-      <Link className={cn['header__logo']}>
-        <SvgIcon icon='NFTHub' />
+      <Link className={cn['header__logo']} to={basePath}>
+        <SvgIcon icon='nfthub' />
       </Link>
 
       <HeaderNav />
       <HeaderSocial />
-      {/* <Example /> */}
-      <Navbar />
+      <HeaderMobileMenu />
     </div>
   )
 }

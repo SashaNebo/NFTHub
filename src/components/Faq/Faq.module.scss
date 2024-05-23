@@ -1,0 +1,149 @@
+.faq {
+
+  &__wrapper {
+    padding: 120px 0px 130px 0px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    max-width: 65%;
+    
+  }
+}
+
+.accordion {
+  width: 100%;
+  margin-top: 75px;
+  padding: 0 15px;
+
+  &__content {
+    margin: 0 -15px;
+    padding: 48px;
+    border: 1px solid rgba(131, 131, 131, 0.25);
+    border-radius: 24px;
+  }
+
+  &__item {
+    overflow: hidden;
+
+    &:not(:first-child) {
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(131, 131, 131, 0.25);
+    }
+  }
+
+  &__item.active svg {
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  &__title {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      transform: translateY(-50%) rotate(-180deg);
+    }
+  }
+
+  &__body {
+    padding: 20px 20px 10px 0;
+    overflow: hidden;
+
+    p {
+      line-height: 1.5;
+
+      &:nth-child(2) {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .accordion {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq {
+
+    &__title {
+      max-width: 100%;
+    }
+  }
+
+  .accordion {
+    
+    &__content {
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__body {
+      
+      padding: 20px 0 10px 0;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .accordion {
+
+    &__title {
+      font-size: 18px;
+    }
+  }
+}
+
+// @media min-width 
+
+@media (min-width: 768px) {
+  .accordion {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .accordion {
+    width: 83%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .accordion {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .accordion {
+    width: 58%;
+  }
+}

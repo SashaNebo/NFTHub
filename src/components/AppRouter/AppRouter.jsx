@@ -1,23 +1,19 @@
-import { useEffect } from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import { MainLayout } from '../../layouts/MainLayout'
 import { Home } from '../../pages/Home/Home'
-import { baseUrl } from '../../routes'
+import { basePath, pagesPath } from '../../routes'
+import { DemoPage } from '../../pages/demoPage/DemoPage'
 
 const AppRouter = () => {
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    navigate(baseUrl)
-  }, [])
-
   return (
     <Routes>
-      <Route path={baseUrl} element={<MainLayout />}>
-        <Route index={true} element={<Home />} />
+      <Route path={basePath} element={<MainLayout />}>
+        <Route path={basePath} element={<Home />} index />
         <Route path='*' element={<Home />} />
       </Route>
+      
+      <Route path={pagesPath} element={<DemoPage />} />
     </Routes>
   )
 }

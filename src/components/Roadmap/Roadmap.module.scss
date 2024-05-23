@@ -1,0 +1,158 @@
+.roadmap {
+
+  &__wrapper {
+    padding: 120px 0px 82px 0px;
+  }
+}
+
+.phase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 48px;
+  margin: 80px -24px 0;
+
+  &__item {
+    padding: 0 24px;
+
+    &-content {
+      position: relative;
+      padding: 32px;
+      border: 1px solid rgba(131, 131, 131, 0.25);
+      border-radius: 32px;
+    }
+  }
+
+  &__percent {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 0.9;
+
+    margin: 16px;
+
+    color: var(--white);
+    background-color: var(--gradient-1);
+    background-image: var(--main-gradient);
+    transform: rotate(16deg);
+    border-radius: 50%;
+
+    span {
+      font-size: 150%;
+    }
+  }
+
+  &__step {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.7;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 22px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.45;
+    margin-top: 26px;
+  }
+
+  &__completed {
+    position: relative;
+    display: grid;
+    row-gap: 10px;
+
+    &::before {
+      content: "";
+      width: 80px;
+      height: 1px;
+      display: block;
+      background-color: rgba(131, 131, 131, 0.25);
+      margin: 35px 0;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+
+      font-size: 18px;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .phase {
+    margin: 80px -15px 0;
+
+    &__item {
+      padding: 0 15px;
+
+      &-content {
+
+        padding: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .phase {
+    grid-template-columns: 50% 50%;
+    row-gap: 30px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .phase {
+    grid-template-columns: 100%;
+
+    &__item {
+      width: 75%;
+      justify-self: center;
+    }
+
+    &__title {
+      margin-top: 18px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .phase {
+
+    &__item {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__text {
+      margin-top: 32px;
+    }
+  }
+}

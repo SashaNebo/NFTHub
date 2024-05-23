@@ -1,15 +1,18 @@
 import clsx from 'clsx'
-import { Link } from 'react-router-dom'
 
 import cn from './UIButtonLink.module.scss'
-import { baseUrl } from '../../../routes'
+import { CustomLink } from '../../CustomLink'
+import { SvgIcon } from '../../SvgIcon'
 
-const UIButtonLink = ({ to = baseUrl, children, className, ...restProps }) => {
-  
+const UIButtonLink = ({ to = '', text, icon, className, ...restProps }) => {
   return (
-    <Link to={to} className={clsx(cn['btn-link'], className)} {...restProps}>
-      {children}
-    </Link>
+    <CustomLink
+      className={clsx(cn['btn-link'], className)}
+      to={to}
+      {...restProps}>
+      <span className={cn['btn-link__text']}>{text}</span>
+      <SvgIcon className={cn['btn-link__icon']} icon={icon} />
+    </CustomLink>
   )
 }
 

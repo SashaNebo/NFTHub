@@ -1,1 +1,1 @@
-export { UIButtonLink } from './UIButtonLink.jsx'
+export { UIButtonLink } from './UIButtonLink'

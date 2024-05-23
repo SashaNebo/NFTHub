@@ -1,0 +1,167 @@
+.fact {
+
+  &__wrapper {
+    padding: 110px 0px 80px 0px;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  &__item {
+    width: 25%;
+    position: relative;
+    padding: 0 15px;
+
+    &::after {
+      content: "";
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background: #e5e5e5;
+      transform: translateY(-50%);
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+
+    &-value {
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+    }
+
+    &-desc {
+      line-height: 1.7;
+      text-align: center;
+      margin-top: 23px;
+    }
+  }
+
+
+
+  &__decoration {
+    position: absolute;
+
+    &-1 {
+      bottom: -55%;
+      left: 30%;
+      width: 32px;
+    }
+
+    &-2 {
+      top: -30%;
+      right: 25%;
+      width: 24px;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .fact {
+
+    &__item {
+
+      &::after {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .fact {
+
+    &__item {
+
+      &-value {
+        font-size: 56px;
+      }
+
+      &-desc {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .fact {
+
+    &__item {
+      width: calc(100% / 3);
+
+      &:nth-child(3)::after {
+        content: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fact {
+
+    &__item {
+      width: 50%;
+
+      &:nth-child(2)::after {
+        content: none;
+      }
+
+      &:nth-child(3)::after {
+        content: "";
+      }
+    }
+
+    &__decoration {
+  
+      &-1 {
+        bottom: -35%;
+        left: 10%;
+      }
+
+      &-2 {
+        right: 10%;
+        top: -30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .fact {
+
+    &__item {
+      width: 100%;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__decoration {
+  
+      &-1 {
+        bottom: -15%;
+        left: 10%;
+      }
+
+      &-2 {
+        top: -15%;
+        right: 20%;
+      }
+    }
+  }
+}

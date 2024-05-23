@@ -1,0 +1,46 @@
+.theme-modifier {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  overflow: hidden;
+  transform: scale(.9);
+  transition: var(--trans-2);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+
+    &.light {
+      background-color: #1B1128;
+    }
+
+    &.dark {
+      background-color: var(--white);
+    }
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+
+    &.light {
+      fill: var(--white);
+    }
+
+    &.dark {
+      fill: #741ff5;
+    }
+  }
+}

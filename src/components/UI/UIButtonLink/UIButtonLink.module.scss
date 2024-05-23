@@ -1,29 +1,42 @@
 .btn-link {
-  display: flex;
-  align-items: center;
+  position: relative;
   width: fit-content;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 127%;
-  text-align: center;
-  color: #fff;
-  background: var(--gradient-cold);
-  column-gap: 8px;
-  padding: 20px 40px;
+  display: flex;
+  column-gap: 10px;
   border-radius: 50px;
-  transition: opacity .15s linear;
+  padding: 21px 40px;
+  background-image: var(--main-gradient);
+  transition: var(--trans-3);
 
-  &:hover {
-    opacity: .7;
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-wrap: nowrap;
+    color: var(--white);
   }
 
-  &:focus-visible {
-    outline: 2px solid var(--white);  
-  }
-
-  svg {
-    width: 15px;
-    height: 15px;
+  &__icon {
+    width: 20px;
+    max-width: none;
+    height: 20px;
+    fill: var(--white);
   }
 }
+
+@media (max-width: 1500px) {
+  .btn-link {
+    padding: 18px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-link {
+    padding: 14px 28px;
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+}
+
