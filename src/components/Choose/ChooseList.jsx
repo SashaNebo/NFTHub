@@ -2,23 +2,7 @@ import { motion } from "framer-motion"
 
 import cn from "./Choose.module.scss"
 import { chooseItems, decorations } from "./additional"
-
-// REFACTOR
-const anChooseList = {
-  inView: (i) => ({
-    y: 0,
-
-    opacity: 1,
-    transition: {
-      delay: i * 0.15,
-    },
-  }),
-
-  hidden: {
-    y: 200,
-    opacity: 0,
-  },
-}
+import { anChooseList } from "../../helpers/animation"
 
 const ChooseList = () => {
   return (
@@ -26,7 +10,7 @@ const ChooseList = () => {
       <motion.div
         className={cn["choose__list"]}
         initial="hidden"
-        whileInView="inView"
+        whileInView="visible"
         viewport={{ once: true, margin: "-300px 0px" }}>
         {chooseItems.map(({ img, title, text }, i) => (
           <motion.div

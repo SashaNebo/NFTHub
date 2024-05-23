@@ -5,20 +5,7 @@ import { CustomLink } from '../../components/CustomLink'
 import { basePath } from '../../routes'
 
 import { wallets, walletsLight } from './additional'
-
-// REFACTOR
-const anBrandList = {
-  inView: (i) => ({
-    scale: 1,
-    transition: {
-      delay: i * 0.1,
-    },
-  }),
-
-  hidden: {
-    scale: 0,
-  },
-}
+import { anBrandList } from "../../helpers/animation"
 
 const Brand = () => {
 
@@ -29,7 +16,7 @@ const Brand = () => {
           <motion.ul
             className={cn['brand__list']}
             initial='hidden'
-            whileInView='inView'
+            whileInView='visible'
             viewport={{ once: true, margin: '-100px 0px' }}
           >
             {wallets.map((wallet, i) => (

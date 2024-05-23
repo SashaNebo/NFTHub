@@ -4,30 +4,31 @@ import cn from "./Roadmap.module.scss"
 import { roadmapItems } from "./additional"
 import checkImg from "../../assets/images/svg/other/check.svg"
 import { UIGradientText } from "../UI/UIGradientText"
+import { anRoadmapList } from "../../helpers/animation"
 
 // REFACTOR
-const anRoadmapList = {
-  inView: (i) => ({
-    y: 0,
+// const anRoadmapList = {
+//   inView: (i) => ({
+//     y: 0,
 
-    opacity: 1,
-    transition: {
-      delay: i * 0.15,
-    },
-  }),
+//     opacity: 1,
+//     transition: {
+//       delay: i * 0.15,
+//     },
+//   }),
 
-  hidden: {
-    y: 200,
-    opacity: 0,
-  },
-}
+//   hidden: {
+//     y: 200,
+//     opacity: 0,
+//   },
+// }
 
 const RoadmapPhase = () => {
   return (
     <motion.div
       className={cn["phase"]}
       initial="hidden"
-      whileInView="inView"
+      whileInView="visible"
       viewport={{ once: true, margin: "-300px 0px" }}>
       {roadmapItems.map(({ percent, title, completed }, i) => (
         <motion.div

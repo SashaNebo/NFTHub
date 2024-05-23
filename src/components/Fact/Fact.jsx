@@ -1,43 +1,31 @@
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion"
 
-import cn from './Fact.module.scss'
-import { factItems } from './additional'
-import { decorations } from './additional'
+import cn from "./Fact.module.scss"
+import { factItems } from "./additional"
+import { decorations } from "./additional"
+import { anFactList } from "../../helpers/animation"
 
 // REFACTOR
-const anFactList = {
-  inView: (i) => ({
-    scale: 1,
-    transition: {
-      delay: i * 0.1,
-    },
-  }),
-
-  hidden: {
-    scale: 0,
-  },
-}
 
 const Fact = () => {
   return (
-    <section className={cn['fact']}>
-      <div className={cn['fact__wrapper']}>
-        <div className='container'>
-          <div className={cn['fact__content']}>
+    <section className={cn["fact"]}>
+      <div className={cn["fact__wrapper"]}>
+        <div className="container">
+          <div className={cn["fact__content"]}>
             <motion.div
-              className={cn['fact__list']}
-              initial='hidden'
-              whileInView='inView'
-              viewport={{ once: true, margin: '-100px 0px' }}
-            >
+              className={cn["fact__list"]}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px 0px" }}>
               {factItems.map(({ title, text }, i) => (
                 <motion.div
-                  className={cn['fact__item']}
+                  className={cn["fact__item"]}
                   key={title}
                   variants={anFactList}
                   custom={i}>
-                  <h2 className={cn['fact__item-value']}>{title}</h2>
-                  <p className={cn['fact__item-desc']}>{text}</p>
+                  <h2 className={cn["fact__item-value"]}>{title}</h2>
+                  <p className={cn["fact__item-desc"]}>{text}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -55,11 +43,11 @@ const Decorations = () => (
     {decorations.map((img, i) => (
       <img
         className={[
-          cn['fact__decoration'],
+          cn["fact__decoration"],
           cn[`fact__decoration-${i + 1}`],
-        ].join(' ')}
+        ].join(" ")}
         src={img}
-        alt='img'
+        alt="img"
         key={img}
       />
     ))}
